@@ -1,0 +1,20 @@
+# https://gitlab.ozon.ru/fe/pipeline
+include:
+  - project: pub/ci
+    ref: 0.0.5
+    file: .fe.gitlab-ci.yml
+  - project: pub/ci
+    ref: 0.0.5
+    file: .blue-green.gitlab-ci.yml
+
+variables:
+  # id из урла https://itc.o3.ru/services/<itc-id>
+  ITC_ID: 12300
+  # enable etcd config updater on deploy stage.
+  # DEPLOY_CONFIG: "yes"
+  # force update etcd values from yaml each deployment
+  # DEPLOY_CONFIG_FROM_YAML_ONLY: "yes"
+  SERVICE_NAME: b2b-admin
+
+development:
+  when: on_success

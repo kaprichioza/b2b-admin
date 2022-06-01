@@ -1,0 +1,31 @@
+service:
+  type: ClusterIP
+  monitoringScope: nodejsapi
+  ports:
+    - name: http
+      port: 80
+    - name: debug
+      port: 84
+
+resources:
+  requests:
+    cpu: 10m
+
+readinessProbe:
+  httpGet:
+    path: /ready
+    port: debug
+
+livenessProbe:
+  httpGet:
+    path: /live
+    port: debug
+
+deploy:
+  env: []
+
+monitoring:
+    opsgenie:
+        responsibleTeam: mp_bfs_team
+    baseAlerts:
+        enabled: false

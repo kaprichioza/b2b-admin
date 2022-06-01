@@ -1,0 +1,17 @@
+{
+  "version": "1.20.2",
+  "project": {
+    "itcId": 12300,
+    "serviceName": "b2b-admin",
+    "opsgenie": "mp_bfs_team",
+    "description": "b2b-admin",
+    "uikit": "ods",
+    "menuItems": {
+      "index": "main"
+    },
+    "initAsGitRepository": true
+  },
+  "proxy": {
+    "serviceItems": []
+  }
+}

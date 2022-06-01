@@ -1,0 +1,22 @@
+deploy:
+  env:
+    - name: ENV
+      value: prod
+    - name: KUBER_ENV
+      value: prod
+    - name: LOGS_GATEWAY
+      # используйте https://xapi.ozon.ru/api/logs-gateway если ваш сервис доступен из внешней сети
+      # например поддомен *.ozon.ru
+      value: https://logs-gateway.t.o3.ru
+    - name: LOGS_SEVERITY
+      value: WARNING
+    - name: TRACKER_HOST
+      value: https://xapi.ozon.ru/dlte/multi
+    - name: TRACKER_TRINITY_STORAGE_URL
+      value: https://trinity-storage.t.o3.ru/v1/json-payloads
+    - name: KEYCLOAK_HOST
+      value: kc-ha1
+    - name: KEYCLOAK_ENDPOINT
+      value: https://sso.o3.ru
+    - name: REALMS
+      value: prod

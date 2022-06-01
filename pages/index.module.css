@@ -1,0 +1,42 @@
+@custom-media --large-viewport (max-width: 1200px);
+
+.headerText {
+	composes: heading-800 from '@fe/ods/styles/typography.module.css';
+}
+
+.page {
+	box-sizing: border-box;
+	height: 100vh;
+	padding: 40px;
+}
+
+.help {
+	display: grid;
+	grid-template-columns: 140px 1fr;
+	margin-bottom: 18px;
+}
+
+.button > span {
+	display: inline-block;
+	padding: 1px 5px;
+
+	vertical-align: text-top;
+
+	border: 1px solid gray;
+	border-radius: 3px;
+}
+
+.head {
+	margin-bottom: 20px;
+}
+
+.cmd {
+	padding: 3px;
+
+	color: white;
+	font-family: monospace;
+
+	background: #214661;
+	border: 1px solid #214661;
+	border-radius: 4px;
+}

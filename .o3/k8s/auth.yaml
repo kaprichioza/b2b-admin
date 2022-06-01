@@ -1,0 +1,29 @@
+client:
+  # Тип клиента (обязательное поле). Для front-end SPA сервисов всегда
+  # используется тип "public".
+  type: public
+  # Список scope, которые использует сервис.
+  scopes:
+    - profile
+    - roles
+  # Указываем название каждого back-end сервиса, в который нужно
+  # отправлять запросы.
+  # Список авторизационных окружений, в которых создаётся Oauth клиент
+  # для сервиса. В каждом окружении можно переопределить настройки из
+  # блока выше.
+  #
+  # В этом примере переопределяем Redirect URLs, на которые
+  # перенаправляется пользователь после входа через SSO. Конечный URL
+  # зависит от используемой OIDC библиотеки.
+environments:
+  development:
+    redirect_urls:
+      - http://b2b-admin*.o3.ru/*
+      - https://b2b-admin*.o3.ru/*
+  staging:
+    redirect_urls:
+      - http://b2b-admin*.o3.ru/*
+      - https://b2b-admin*.o3.ru/*
+  production:
+    redirect_urls:
+      - https://b2b-admin.t.o3.ru/*

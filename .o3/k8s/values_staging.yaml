@@ -1,0 +1,20 @@
+deploy:
+  env:
+    - name: ENV
+      value: stg
+    - name: KUBER_ENV
+      value: stg
+    - name: LOGS_GATEWAY
+      value: http://logs-gateway.logging.stg.s.o3.ru
+    - name: LOGS_SEVERITY
+      value: WARNING
+    - name: TRACKER_HOST
+      value: https://xapi-stg.ozonru.me/dlte/multi
+    - name: TRACKER_TRINITY_STORAGE_URL
+      value: https://trinity-storage-stg.ozonru.me/v1/json-payloads
+    - name: KEYCLOAK_HOST
+      value: keycloak-reserve
+    - name: KEYCLOAK_ENDPOINT
+      value: https://sso-test.o3.ru
+    - name: REALMS
+      value: stg
